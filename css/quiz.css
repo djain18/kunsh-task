@@ -1,0 +1,273 @@
+/* ── Section 4: Quiz UI ─────────────────────────────────── */
+
+#quiz {
+  background: var(--ivory);
+}
+
+#quiz .quiz-instruction {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--mid-gray);
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ── Quiz container ─────────────────────────────────────── */
+.quiz-container {
+  max-width: 680px;
+  margin: 0 auto;
+  border: 1px solid var(--rule);
+  background: var(--card-bg);
+  position: relative;
+}
+
+/* ── Progress ───────────────────────────────────────────── */
+.quiz-progress-track {
+  height: 3px;
+  background: var(--rule);
+  width: 100%;
+}
+
+.quiz-progress-bar {
+  height: 100%;
+  background: var(--vermillion);
+  width: 10%;
+  transition: width 0.5s var(--ease-out-expo);
+}
+
+.quiz-progress-label {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  font-style: italic;
+  padding: 0.85rem 2rem 0;
+  display: block;
+}
+
+/* ── Question screen ────────────────────────────────────── */
+#question-screen {
+  padding: 1.5rem 2rem 2rem;
+}
+
+.quiz-question {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+  min-height: 4rem;
+}
+
+/* ── Options ────────────────────────────────────────────── */
+.quiz-options {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.75rem;
+}
+
+.quiz-option-btn {
+  width: 100%;
+  text-align: left;
+  background: var(--ivory);
+  border: 1px solid var(--rule);
+  padding: 0.9rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--ink-light);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  line-height: 1.5;
+}
+
+.quiz-option-btn:hover:not(:disabled) {
+  background: var(--ivory-deep);
+  border-color: var(--mid-gray);
+  color: var(--ink);
+}
+
+.quiz-option-btn:disabled {
+  cursor: default;
+}
+
+.option-letter {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  flex-shrink: 0;
+  padding-top: 0.1rem;
+  font-style: italic;
+  min-width: 1.2rem;
+}
+
+/* Correct answer state */
+.quiz-option-btn.correct {
+  background: #E8F5E9;
+  border-color: #2E7D32;
+  color: #1B5E20;
+  pointer-events: none;
+}
+
+.quiz-option-btn.correct .option-letter {
+  color: #2E7D32;
+}
+
+/* Wrong answer state */
+.quiz-option-btn.wrong {
+  background: #FFEBEE;
+  border-color: #C62828;
+  color: #B71C1C;
+  pointer-events: none;
+}
+
+.quiz-option-btn.wrong .option-letter {
+  color: #C62828;
+}
+
+/* ── Did You Know card ──────────────────────────────────── */
+.dyk-card {
+  background: var(--section-alt);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--colonial-green);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  display: none;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.45s var(--ease-out-expo), opacity 0.45s ease;
+}
+
+.dyk-card.dyk-visible {
+  display: block;
+}
+
+.dyk-card.dyk-animated {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.dyk-label {
+  font-family: var(--font-label);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--colonial-green);
+  font-style: italic;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.dyk-text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--ink-light);
+  line-height: 1.7;
+}
+
+/* ── Next / Results button ──────────────────────────────── */
+#next-btn {
+  display: none;
+  background: var(--vermillion);
+  color: #fff;
+  border: none;
+  padding: 0.85rem 2rem;
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-style: italic;
+}
+
+#next-btn:hover {
+  background: var(--vermillion-dark);
+}
+
+#next-btn.visible {
+  display: inline-block;
+}
+
+/* ── Results screen ─────────────────────────────────────── */
+#results-screen {
+  display: none;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+#results-screen.visible {
+  display: block;
+}
+
+.results-score {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 7rem);
+  font-weight: 300;
+  color: var(--vermillion);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.results-denom {
+  font-size: 0.55em;
+  color: var(--mid-gray);
+}
+
+.results-label {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink-light);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.results-divider {
+  width: 60px;
+  height: 2px;
+  background: var(--rule);
+  margin: 0 auto 2rem;
+}
+
+#retake-btn {
+  background: none;
+  border: 1px solid var(--vermillion);
+  color: var(--vermillion);
+  padding: 0.75rem 2rem;
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-style: italic;
+  transition: background 0.2s, color 0.2s;
+}
+
+#retake-btn:hover {
+  background: var(--vermillion);
+  color: #fff;
+}
+
+/* ── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .quiz-container {
+    margin: 0;
+  }
+
+  #question-screen {
+    padding: 1.25rem 1.25rem 1.5rem;
+  }
+
+  .quiz-question {
+    font-size: 1.1rem;
+  }
+}

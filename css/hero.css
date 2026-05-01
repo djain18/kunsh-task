@@ -1,0 +1,219 @@
+/* ── Section 1: Hero ────────────────────────────────────── */
+
+#home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 2rem 4rem;
+
+  /* Aged paper grain texture via layered gradients + SVG noise */
+  background-color: var(--ivory);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(45, 74, 60, 0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 80% at 90% 90%, rgba(185, 74, 55, 0.05) 0%, transparent 60%);
+}
+
+/* Decorative vertical rule — the editorial "spine" */
+#home::before {
+  content: '';
+  position: absolute;
+  left: clamp(1.5rem, 4vw, 4rem);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--vermillion) 15%,
+    var(--vermillion) 85%,
+    transparent 100%
+  );
+  opacity: 0.7;
+}
+
+/* Decorative corner mark — top right */
+#home::after {
+  content: '';
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  width: 48px;
+  height: 48px;
+  border-top: 2px solid var(--gold);
+  border-right: 2px solid var(--gold);
+  opacity: 0.4;
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding-left: clamp(3rem, 7vw, 7rem);
+  position: relative;
+  z-index: 1;
+}
+
+/* Eyebrow label above headline */
+.hero-eyebrow {
+  font-family: var(--font-label);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--vermillion);
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: slideUp 0.8s var(--ease-out-expo) 0.1s forwards;
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(3rem, 8.5vw, 8rem);
+  line-height: 1.02;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 2.5rem;
+}
+
+.hero-headline .line-1 {
+  display: block;
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: slideUp 0.9s var(--ease-out-expo) 0.22s forwards;
+}
+
+.hero-headline .line-2 {
+  display: block;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: slideUp 0.9s var(--ease-out-expo) 0.36s forwards;
+}
+
+.hero-subheading {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--ink-light);
+  max-width: 52ch;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: slideUp 0.9s var(--ease-out-expo) 0.5s forwards;
+}
+
+.hero-meta {
+  font-family: var(--font-label);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: slideUp 0.9s var(--ease-out-expo) 0.64s forwards;
+}
+
+.hero-meta span {
+  color: var(--rule);
+}
+
+/* Scroll indicator */
+.hero-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: clamp(3rem, 7vw, 7rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 1s ease 1.1s forwards;
+}
+
+.hero-scroll-label {
+  font-family: var(--font-label);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--vermillion), transparent);
+  animation: scrollPulse 2s ease-in-out 1.5s infinite;
+}
+
+/* Decorative large quotation mark */
+.hero-decoration {
+  position: absolute;
+  right: clamp(2rem, 8vw, 8rem);
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 16vw, 18rem);
+  line-height: 1;
+  color: var(--rule);
+  opacity: 0.35;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* ── Keyframes ──────────────────────────────────────────── */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50%       { opacity: 0.4; transform: scaleY(0.7); }
+}
+
+/* ── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  .hero-inner {
+    padding-left: 2.5rem;
+  }
+
+  .hero-decoration {
+    display: none;
+  }
+
+  #home::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-inner {
+    padding-left: 2rem;
+  }
+
+  #home::before {
+    left: 1rem;
+  }
+}
