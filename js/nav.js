@@ -1,50 +1,66 @@
-(function () {
-  'use strict';
+/* FILE: project/js/nav.js */
 
-  var nav = document.querySelector('.site-nav');
-  var hero = document.getElementById('home');
-  var toggle = document.querySelector('.nav-toggle');
-  var navLinks = document.querySelector('.nav-links');
-
-  if (!nav || !hero) return;
-
-  /* Show nav when hero leaves viewport */
-  var heroObserver = new IntersectionObserver(function (entries) {
-    var entry = entries[0];
-    if (!entry.isIntersecting) {
-      nav.classList.add('nav-visible');
-    } else {
-      nav.classList.remove('nav-visible');
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.site-nav');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const links = document.querySelectorAll('.nav-links a');
+  
+  let lastScroll = 0;
+  
+  // Sticky nav hide/show on scroll
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+      nav.classList.remove('nav-hidden');
+      return;
     }
-  }, { threshold: 0.05 });
-
-  heroObserver.observe(hero);
-
-  /* Mobile hamburger toggle */
-  if (toggle && navLinks) {
-    toggle.addEventListener('click', function () {
-      var isOpen = navLinks.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-  }
-
-  /* Smooth scroll for all nav links */
-  var links = document.querySelectorAll('.nav-links a[href^="#"]');
-  links.forEach(function (link) {
-    link.addEventListener('click', function (e) {
+    
+    if (currentScroll > lastScroll && !nav.classList.contains('nav-hidden')) {
+      // Scroll down - hide nav
+      nav.classList.add('nav-hidden');
+    } else if (currentScroll < lastScroll && nav.classList.contains('nav-hidden')) {
+      // Scroll up - show nav
+      nav.classList.remove('nav-hidden');
+    }
+    
+    lastScroll = currentScroll;
+  });
+  
+  // Mobile menu toggle
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    
+    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', !isExpanded);
+  });
+  
+  // Smooth scroll
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
       e.preventDefault();
-      var target = document.querySelector(this.getAttribute('href'));
-      if (!target) return;
-
-      /* Close mobile menu if open */
-      if (navLinks) navLinks.classList.remove('open');
-
-      /* Offset for fixed nav height */
-      var navH = nav.classList.contains('nav-visible') ? nav.offsetHeight : 0;
-      var top = target.getBoundingClientRect().top + window.pageYOffset - navH;
-
-      window.scrollTo({ top: top, behavior: 'smooth' });
+      
+      // Close mobile menu if open
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+      
+      const targetId = link.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        // Offset for sticky nav
+        const navHeight = nav.offsetHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
     });
   });
-
-}());
+});

@@ -1,37 +1,62 @@
+/* FILE: project/css/base.css */
+
 /*
- * ============================================================
- * DESIGN SYSTEM — "When There Is a Will, Is There a Way?"
- * NLSIU Bangalore · Family Law Project · 2025
- * ============================================================
- *
- * AESTHETIC DIRECTION: Archival Editorial
- * Concept: A 19th-century Portuguese legal codex translated
- * into modern web editorial. The palette draws from aged
- * ivory paper (background), ink-stamp vermillion (accent),
- * French colonial green (secondary), and legal document gold.
- * Typography pairs Cormorant Garamond (display) with Lora
- * (body) — both historically resonant serifs chosen for their
- * editorial authority and distance from generic AI aesthetics.
- *
- * PALETTE RATIONALE:
- *   --ivory       — aged paper; warm neutral ground
- *   --vermillion  — Portuguese azulejo tile red; stamp ink
- *   --colonial-green — French colonial administrative green
- *   --gold        — legal seal / document gilt
- *   --ink         — deep near-black for primary text
- *
- * MOTION: translateY reveals (not fade-in), staggered card
- * entrances via --reveal-delay, hero stagger via animation-delay.
- *
- * ANTI-CONVERGENCE: No Inter/Poppins/Space Grotesk. No purple
- * gradients. No glassmorphism. No rounded shadow cards.
- * No hover scale(1.05).
- * ============================================================
+ * DESIGN SYSTEM: "Deconstructed Legal Archive"
+ * 
+ * Aesthetic Rationale: 
+ * To marry the user's desire for a fascinating, "wow-factor" experience with the 
+ * historical gravity of colonial law, we use an ultra-high-contrast, dark-mode 
+ * editorial aesthetic. 
+ * 
+ * Typography:
+ * - 'Bodoni Moda': An extreme-contrast, high-fashion serif rooted in 18th-century 
+ *   European typography. It screams "French/Portuguese colonial authority" but looks 
+ *   incredibly striking and modern when scaled up massively.
+ * - 'Chivo': A brutal, heavy-duty sans-serif that grounds the design, representing 
+ *   the modern Indian constitutional framework.
+ * 
+ * Palette:
+ * - Pitch Black (#070707) canvas to make colors explode.
+ * - Vellum Off-White (#F4F0E6) for text, reducing eye strain.
+ * - Sealing Wax Red (#D32F2F) representing Goa/Portuguese Code.
+ * - Ultramarine Blue (#194EE6) representing Puducherry/French Code.
+ * - Faded Gold (#C5A059) for legal prestige and borders.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
 
-/* ── Reset ─────────────────────────────────────────────── */
+:root {
+  /* Colors */
+  --bg-dark: #070707;
+  --bg-surface: #111111;
+  --bg-surface-hover: #1A1A1A;
+  
+  --text-main: #F4F0E6;
+  --text-muted: rgba(244, 240, 230, 0.6);
+  --text-dark: #070707;
+  
+  --accent-goa: #D32F2F;
+  --accent-french: #194EE6;
+  --accent-gold: #C5A059;
+  
+  --border-subtle: rgba(244, 240, 230, 0.15);
+  --border-strong: rgba(244, 240, 230, 0.4);
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Outfit', sans-serif;
+  
+  /* Spatial & Grid */
+  --container-width: 1400px;
+  --container-padding: 5vw;
+  --section-padding: 8rem;
+  
+  /* Animation */
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Reset & Base */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -41,226 +66,212 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  background-color: var(--bg-dark);
 }
 
 body {
-  font-family: 'Lora', Georgia, serif;
-  background-color: var(--ivory);
-  color: var(--ink);
-  line-height: 1.75;
+  font-family: var(--font-body);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
+/* Texture Overlay - Removed to ensure clean text rendering */
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-/* ── Design Tokens ──────────────────────────────────────── */
-:root {
-  --ivory:          #F8F3E8;
-  --ivory-deep:     #EFE9D8;
-  --ink:            #1C1C1E;
-  --ink-light:      #3A3A3C;
-  --vermillion:     #B94A37;
-  --vermillion-dark:#8B3427;
-  --colonial-green: #2D4A3C;
-  --gold:           #C9963A;
-  --mid-gray:       #8C8B83;
-  --rule:           #D4C9B0;
-  --section-alt:    #F0EBE0;
-  --card-bg:        #FDFAF4;
-
-  --font-display:   'Cormorant Garamond', Georgia, serif;
-  --font-body:      'Lora', Georgia, serif;
-  --font-label:     'Libre Baskerville', Georgia, serif;
-
-  --max-width:      1140px;
-  --section-pad:    6rem 2rem;
-  --nav-h:          64px;
-
-  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ── Utility classes ────────────────────────────────────── */
+/* Layout Utilities */
 .container {
-  max-width: var(--max-width);
+  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--container-padding);
+}
+
+.site-section {
+  padding: var(--section-padding) 0;
+  position: relative;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .section-label {
-  font-family: var(--font-label);
-  font-size: 0.72rem;
-  font-style: italic;
-  letter-spacing: 0.18em;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
   text-transform: uppercase;
-  color: var(--vermillion);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.section-label::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--rule);
-  max-width: 120px;
+  letter-spacing: 0.2em;
+  color: var(--accent-gold);
+  margin-bottom: 2rem;
+  display: block;
 }
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 300;
-  line-height: 1.15;
-  color: var(--ink);
-  margin-bottom: 0.75rem;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
 }
 
 .section-subtitle {
   font-family: var(--font-body);
-  font-style: italic;
-  color: var(--mid-gray);
-  font-size: 1.05rem;
-  margin-bottom: 3rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--text-muted);
+  max-width: 700px;
+  margin-bottom: 4rem;
+  font-weight: 300;
 }
 
-/* ── Scroll reveal ──────────────────────────────────────── */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition:
-    opacity 0.7s var(--ease-out-expo),
-    transform 0.7s var(--ease-out-expo);
-  transition-delay: var(--reveal-delay, 0ms);
-}
+/* Typography Utilities */
+.text-goa { color: var(--accent-goa); }
+.text-french { color: var(--accent-french); }
 
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ── Sticky Navigation ──────────────────────────────────── */
+/* Sticky Navigation */
 .site-nav {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 999;
-  height: var(--nav-h);
-  background: var(--ivory);
-  border-bottom: 1px solid var(--rule);
-  border-left: 4px solid var(--vermillion);
+  width: 100%;
+  padding: 1.5rem var(--container-padding);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
-  gap: 2rem;
-  transform: translateY(-100%);
-  transition: transform 0.45s var(--ease-out-expo);
-  box-shadow: 0 2px 24px rgba(28, 28, 30, 0.07);
+  z-index: 1000;
+  background: transparent;
+  transition: transform 0.4s var(--ease-smooth);
 }
 
-.site-nav.nav-visible {
-  transform: translateY(0);
+.site-nav.nav-hidden {
+  transform: translateY(-100%);
 }
 
 .nav-brand {
   font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: var(--ink);
-  white-space: nowrap;
-  margin-right: auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--bg-dark);
+  text-decoration: none;
 }
 
 .nav-links {
   display: flex;
-  align-items: center;
-  gap: 0.25rem;
+  gap: 2.5rem;
   list-style: none;
-  flex-wrap: wrap;
 }
 
 .nav-links a {
-  font-family: var(--font-label);
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
   text-transform: uppercase;
-  color: var(--ink-light);
-  padding: 0.4rem 0.75rem;
-  transition: color 0.2s, background 0.2s;
-  display: block;
+  letter-spacing: 0.1em;
+  color: var(--bg-dark);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 0.25rem;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent-gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s var(--ease-smooth);
 }
 
 .nav-links a:hover {
-  color: var(--vermillion);
-  background: var(--ivory-deep);
+  color: var(--accent-gold);
 }
 
-/* Mobile nav */
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 .nav-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
-  flex-direction: column;
-  gap: 5px;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 1001;
 }
 
 .nav-toggle span {
-  display: block;
-  width: 22px;
-  height: 1.5px;
-  background: var(--ink);
-  transition: transform 0.3s, opacity 0.3s;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--bg-dark);
+  transition: 0.3s;
+  left: 0;
 }
 
-@media (max-width: 720px) {
-  .nav-toggle {
-    display: flex;
-    margin-left: auto;
-  }
+.nav-toggle span:nth-child(1) { top: 0; }
+.nav-toggle span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.nav-toggle span:nth-child(3) { bottom: 0; }
 
+.nav-toggle.active span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+@media (max-width: 992px) {
   .nav-links {
-    display: none;
-    position: absolute;
-    top: var(--nav-h);
-    left: 0;
-    right: 0;
-    background: var(--ivory);
-    border-bottom: 1px solid var(--rule);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-dark);
     flex-direction: column;
-    padding: 1rem 2rem;
-    gap: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transition: 0.5s var(--ease-spring);
   }
-
-  .nav-links.open {
-    display: flex;
+  
+  .nav-links.active {
+    right: 0;
   }
-
+  
   .nav-links a {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--rule);
-    font-size: 0.75rem;
+    font-size: 1.5rem;
+    font-family: var(--font-display);
+    text-transform: none;
+    letter-spacing: normal;
   }
+  
+  .nav-toggle {
+    display: block;
+  }
+}
 
-  .nav-links li:last-child a {
-    border-bottom: none;
-  }
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s var(--ease-smooth), transform 1s var(--ease-smooth);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }

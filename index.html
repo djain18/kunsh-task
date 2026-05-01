@@ -12,11 +12,9 @@
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════════════════
-       STICKY NAVIGATION
-  ════════════════════════════════════════════════════════ -->
+  <!-- STICKY NAVIGATION -->
   <nav class="site-nav" aria-label="Main navigation">
-    <span class="nav-brand">Will &amp; Way</span>
+    <a href="#home" class="nav-brand">Will &amp; Way</a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -31,372 +29,330 @@
     </ul>
   </nav>
 
-  <!-- ═══════════════════════════════════════════════════════
-       SECTION 1 — HERO
-  ════════════════════════════════════════════════════════ -->
-  <section id="home" aria-label="Hero">
+  <!-- SECTION 1 — HERO -->
+  <section id="home" class="hero-section" aria-label="Hero">
+    <!-- Large decorative legal section mark -->
+    <div class="hero-deco-symbol" aria-hidden="true">§</div>
 
     <div class="hero-inner">
-      <p class="hero-eyebrow">NLSIU Bangalore &nbsp;·&nbsp; Family Law Project &nbsp;·&nbsp; 2025</p>
+      <!-- Left accent bar -->
+      <div class="hero-accent-bar" aria-hidden="true"></div>
 
-      <h1 class="hero-headline">
-        <span class="line-1">When there is a will,</span>
-        <span class="line-2">is there a way?</span>
-      </h1>
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal" style="--reveal-delay:0ms">NLSIU Bangalore &nbsp;·&nbsp; Family Law Project</p>
+        
+        <h1 class="hero-headline">
+          <span class="reveal" style="--reveal-delay:200ms">When there</span>
+          <span class="reveal" style="--reveal-delay:300ms">is a will,</span>
+          <span class="reveal title-italic" style="--reveal-delay:500ms">is there a way?</span>
+        </h1>
+      </div>
 
-      <p class="hero-subheading">
-        Exploring the distinct inheritance systems of Goa and Puducherry
-        in modern India — where colonial civil codes outlasted empire,
-        and the question of uniformity meets the question of justice.
-      </p>
-
-      <div class="hero-meta">
-        <span>Portuguese Civil Code</span>
-        <span style="color:var(--rule)">·</span>
-        <span>French Personal Law</span>
-        <span style="color:var(--rule)">·</span>
-        <span>UCC Debate</span>
+      <!-- Bottom split row: subtitle left, CTA right -->
+      <div class="hero-bottom-row">
+        <p class="hero-subheading reveal" style="--reveal-delay:600ms">
+          Exploring the distinct inheritance systems of Goa and Puducherry in modern India, where colonial civil codes outlasted empire and the question of uniformity meets the question of justice.
+        </p>
+        
+        <div class="hero-actions reveal" style="--reveal-delay:800ms">
+          <a href="#video" class="hero-cta">
+            <span>Explore the Codes</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="hero-decoration" aria-hidden="true">&ldquo;</div>
-
-    <div class="hero-scroll" aria-hidden="true">
-      <span class="hero-scroll-label">Scroll</span>
-      <span class="hero-scroll-line"></span>
+    <div class="hero-scroll-indicator reveal" style="--reveal-delay:1000ms">
+      <div class="scroll-line"></div>
     </div>
-
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════
-       SECTION 2 — INFOGRAPHIC VIDEO
-  ════════════════════════════════════════════════════════ -->
+  <!-- SECTION 2 — INFOGRAPHIC VIDEO -->
   <section id="video" class="site-section" aria-label="Infographic Video">
     <div class="container">
-
-      <p class="section-label">Infographic</p>
-      <h2 class="section-title reveal">Understanding Inheritance Across Borders</h2>
-      <!-- REPLACE: subtitle text -->
-      <p class="section-subtitle reveal" style="--reveal-delay:100ms">
-        How two colonial legal traditions survived Indian integration — and what they mean for families today.
+      <span class="section-label reveal">01 — Infographic Video</span>
+      <h2 class="section-title reveal" style="--reveal-delay:100ms">Legacies of the Code</h2>
+      <p class="section-subtitle reveal" style="--reveal-delay:200ms">
+        An animated overview of how Goa and Puducherry's colonial civil codes survived Indian integration and continue to shape inheritance today.
       </p>
 
-      <div class="video-wrapper reveal" style="--reveal-delay:200ms">
-        <!-- REPLACE: src="assets/infographic.mp4" -->
-        <video controls preload="metadata" aria-label="Infographic video on Goa and Puducherry inheritance systems">
-          <source src="assets/infographic.mp4" type="video/mp4" />
-          Your browser does not support the video element.
-        </video>
+      <div class="video-container reveal" style="--reveal-delay:300ms">
+        <div class="video-frame">
+          <iframe
+            src="https://drive.google.com/file/d/1NBkZQsoUrHMgljwzfldv5fn_OUs67-qq/preview"
+            allow="autoplay"
+            allowfullscreen
+            aria-label="Infographic video on Goa and Puducherry inheritance systems"
+          ></iframe>
+        </div>
       </div>
 
-      <div class="takeaway-grid">
-
-        <div class="takeaway-card reveal" style="--reveal-delay:0ms">
-          <!-- REPLACE: Takeaway 1 label and text -->
-          <span class="takeaway-label">Goa's Unique Code</span>
-          <p class="takeaway-text"><!-- REPLACE: 2-sentence takeaway about the Portuguese Civil Code's application in Goa. --></p>
+      <div class="takeaways-grid">
+        <div class="takeaway-card goa-accent reveal" style="--reveal-delay:100ms">
+          <div class="takeaway-num">I</div>
+          <h3 class="takeaway-title">Goa's Portuguese Code</h3>
+          <p class="takeaway-text">The Portuguese Civil Code of 1867 applies uniformly to all Goans regardless of religion — a unique regime of matrimonial communion of property that survived Indian integration.</p>
         </div>
-
-        <div class="takeaway-card reveal" style="--reveal-delay:120ms">
-          <!-- REPLACE: Takeaway 2 label and text -->
-          <span class="takeaway-label">Forced Heirship</span>
-          <p class="takeaway-text"><!-- REPLACE: 2-sentence takeaway about the legitima and what it means for testamentary freedom. --></p>
+        <div class="takeaway-card gold-accent reveal" style="--reveal-delay:200ms">
+          <div class="takeaway-num">II</div>
+          <h3 class="takeaway-title">Forced Heirship (Legítima)</h3>
+          <p class="takeaway-text">The 'legítima' reserves half the estate strictly for biological descendants — a parent cannot fully disinherit their children, however estranged.</p>
         </div>
-
-        <div class="takeaway-card reveal" style="--reveal-delay:240ms">
-          <!-- REPLACE: Takeaway 3 label and text -->
-          <span class="takeaway-label">Puducherry's Renoncants</span>
-          <p class="takeaway-text"><!-- REPLACE: 2-sentence takeaway about renoncants and the French Civil Code in Puducherry. --></p>
+        <div class="takeaway-card french-accent reveal" style="--reveal-delay:300ms">
+          <div class="takeaway-num">III</div>
+          <h3 class="takeaway-title">Puducherry's Renonçants</h3>
+          <p class="takeaway-text">Since 1881, certain Puducherry citizens renounced personal law to be governed by the French Civil Code — a lineage that persists across three generations today.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════
-       SECTION 3 — LOCAL LIVED EXPERIENCES
-  ════════════════════════════════════════════════════════ -->
-  <section id="voices" class="site-section site-section--alt" aria-label="Local Lived Experiences">
+  <!-- SECTION 3 — LOCAL LIVED EXPERIENCES -->
+  <section id="voices" class="site-section inverted-section" aria-label="Local Lived Experiences">
     <div class="container">
-
-      <p class="section-label">Voices</p>
-      <h2 class="section-title reveal">Local Lived Experiences</h2>
-      <p class="section-subtitle reveal" style="--reveal-delay:100ms">
-        Two perspectives from within the communities these laws govern.
+      <span class="section-label reveal">02 — Local Lived Experiences</span>
+      <h2 class="section-title reveal" style="--reveal-delay:100ms">Voices from the Ground</h2>
+      <p class="section-subtitle reveal" style="--reveal-delay:200ms">
+        Two personal accounts from within the communities these inheritance laws continue to govern.
       </p>
 
       <div class="voices-grid">
-
-        <!-- Person 1: Matilde Ribeiro -->
-        <div class="voice-card reveal" style="--reveal-delay:0ms">
-          <div class="voice-card__video-wrapper">
-            <!-- REPLACE: src="assets/interview-matilde.mp4" -->
-            <video controls preload="metadata" aria-label="Interview with Matilde Ribeiro">
-              <source src="assets/interview-matilde.mp4" type="video/mp4" />
-              Your browser does not support the video element.
-            </video>
+        <!-- Person 1 -->
+        <div class="voice-card reveal" style="--reveal-delay:100ms">
+          <div class="voice-video">
+            <iframe
+              src="https://drive.google.com/file/d/1nNHtwb8rXsVKI6X4BV_gDe6FKw-AkteB/preview"
+              allow="autoplay"
+              allowfullscreen
+              aria-label="Interview with Matilde Ribeiro"
+            ></iframe>
           </div>
-          <div class="voice-card__body">
-            <p class="voice-card__name">Matilde Ribeiro</p>
-            <p class="voice-card__descriptor">4th Year Student, NLSIU Bangalore &nbsp;·&nbsp; Goan Ancestry</p>
-            <!-- REPLACE: pull quote from Matilde Ribeiro about her experience with Goan inheritance law -->
-            <blockquote class="voice-card__quote">
-              <!-- REPLACE: "Growing up, I always knew the rules were different in Goa — but I never understood how different until I studied the Code." -->
+          <div class="voice-meta goa-border">
+            <h3 class="voice-name">Matilde Ribeiro</h3>
+            <span class="voice-desc">4th Year BA LLB Student, NLSIU Bangalore &nbsp;·&nbsp; Goan Ancestry</span>
+            <blockquote class="voice-quote">
+              "Growing up, I always knew the rules were different in Goa — but I never understood how different until I studied the Code."
             </blockquote>
           </div>
         </div>
 
-        <!-- Person 2: Dr. Kamraj -->
-        <div class="voice-card reveal" style="--reveal-delay:150ms">
-          <div class="voice-card__video-wrapper">
-            <!-- REPLACE: src="assets/interview-kamraj.mp4" -->
-            <video controls preload="metadata" aria-label="Interview with Dr. Kamraj">
-              <source src="assets/interview-kamraj.mp4" type="video/mp4" />
-              Your browser does not support the video element.
-            </video>
+        <!-- Person 2 -->
+        <div class="voice-card reveal" style="--reveal-delay:300ms">
+          <div class="voice-video">
+            <iframe
+              src="https://drive.google.com/file/d/1n8nGZbnnoru-ILlFsI5bNozF1FwTPeM0/preview"
+              allow="autoplay"
+              allowfullscreen
+              aria-label="Interview with Dr. Kamraj"
+            ></iframe>
           </div>
-          <div class="voice-card__body">
-            <p class="voice-card__name">Dr. Kamraj</p>
-            <p class="voice-card__descriptor">Domicile of Puducherry</p>
-            <!-- REPLACE: pull quote from Dr. Kamraj about the French civil law tradition in Puducherry -->
-            <blockquote class="voice-card__quote">
-              <!-- REPLACE: "The renoncant system is not history — it is still my family's reality, three generations on." -->
+          <div class="voice-meta french-border">
+            <h3 class="voice-name">Dr. Kamraj</h3>
+            <span class="voice-desc">A Domicile of Puducherry</span>
+            <blockquote class="voice-quote">
+              "The renonçant system is not history — it is still my family's reality, three generations on."
             </blockquote>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════
-       SECTION 4 — INTERACTIVE QUIZ
-  ════════════════════════════════════════════════════════ -->
+  <!-- SECTION 4 — INTERACTIVE QUIZ -->
   <section id="quiz" class="site-section" aria-label="Interactive Quiz">
     <div class="container">
-
-      <p class="section-label">Test Yourself</p>
-      <h2 class="section-title reveal">How Well Do You Know the Law?</h2>
-      <p class="quiz-instruction reveal" style="--reveal-delay:100ms">
-        Ten questions on the Portuguese Civil Code, the French Civil Code, and the inheritance systems of Goa and Puducherry. Select an answer to reveal a legal fact after each question.
+      <span class="section-label reveal">03 — Quiz</span>
+      <h2 class="section-title reveal" style="--reveal-delay:100ms">Test Your Knowledge</h2>
+      <p class="section-subtitle reveal" style="--reveal-delay:200ms">
+        Ten interactive questions on the Portuguese Civil Code, the French Civil Code, and the inheritance systems of Goa and Puducherry. Select an answer — wrong choices will be marked in red, and the correct answer revealed.
       </p>
 
-      <div class="quiz-container reveal" style="--reveal-delay:200ms">
-
-        <!-- Progress -->
-        <div class="quiz-progress-track">
-          <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
-        </div>
-        <span class="quiz-progress-label" id="quiz-progress-label">Question 1 of 10</span>
-
-        <!-- Question screen -->
-        <div id="question-screen">
-          <p class="quiz-question" id="quiz-question"></p>
-
-          <ul class="quiz-options" id="quiz-options" role="list"></ul>
-
-          <!-- Did You Know card -->
-          <div class="dyk-card" id="dyk-card" role="status" aria-live="polite">
-            <span class="dyk-label">&#128161; Did You Know?</span>
-            <p class="dyk-text" id="dyk-text"></p>
+      <div class="quiz-app reveal" style="--reveal-delay:300ms">
+        <div class="quiz-header">
+          <div class="quiz-progress-wrapper">
+            <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
           </div>
-
-          <button class="quiz-option-btn" id="next-btn" type="button">Next &rarr;</button>
+          <span class="quiz-progress-text" id="quiz-progress-text">Question 1 of 10</span>
         </div>
 
-        <!-- Results screen -->
-        <div id="results-screen" role="region" aria-label="Quiz results">
+        <div class="quiz-body" id="quiz-screen">
+          <h3 class="quiz-question" id="quiz-question"></h3>
+          <div class="quiz-options" id="quiz-options"></div>
+        </div>
+
+        <div class="quiz-fact-card" id="quiz-fact-card">
+          <span class="fact-label">💡 Did You Know?</span>
+          <p class="fact-text" id="quiz-fact-text"></p>
+        </div>
+
+        <div class="quiz-footer">
+          <button class="quiz-btn" id="quiz-next-btn">Next Question</button>
+        </div>
+
+        <div class="quiz-results" id="quiz-results-screen">
           <div class="results-score" id="results-score"></div>
-          <div class="results-divider"></div>
-          <span class="results-label" id="results-label"></span>
-          <br />
-          <button id="retake-btn" type="button">Retake Quiz</button>
+          <h3 class="results-title" id="results-title"></h3>
+          <button class="quiz-btn" id="quiz-retake-btn">Retake Quiz</button>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════
-       SECTION 5 — SCHOLARLY PODCAST
-  ════════════════════════════════════════════════════════ -->
-  <section id="podcast" class="site-section site-section--alt" aria-label="Scholarly Podcast">
+  <!-- SECTION 5 — SCHOLARLY PODCAST -->
+  <section id="podcast" class="site-section inverted-section" aria-label="Scholarly Podcast">
     <div class="container">
+      <span class="section-label reveal">04 — Scholarly Podcast</span>
+      <h2 class="section-title reveal" style="--reveal-delay:100ms">A Scholarly Conversation</h2>
 
-      <p class="section-label">Podcast</p>
-      <h2 class="section-title reveal">A Scholarly Conversation</h2>
-
-      <!-- Guest card -->
-      <div class="guest-card reveal" style="--reveal-delay:100ms">
-
-        <div class="guest-portrait">
-          <!-- REPLACE: swap initials div for <img src="assets/pearl-monteiro.jpg" alt="Ms. Pearl Monteiro" /> -->
-          <span class="guest-initials">PM</span>
+      <div class="podcast-module reveal" style="--reveal-delay:200ms">
+        <!-- Full-width video player -->
+        <div class="guest-video-full">
+          <iframe
+            src="https://drive.google.com/file/d/1GbP8i5n-MtNAlC29h-jCwOxvSBGZYhWN/preview"
+            allow="autoplay"
+            allowfullscreen
+            aria-label="Video interview with Ms. Pearl Monteiro"
+          ></iframe>
         </div>
-
-        <div class="guest-info">
-          <p class="guest-info__name">Ms. Pearl Monteiro</p>
-          <p class="guest-info__title">Professor, VMS Salgaocar Law College, Goa</p>
-          <!-- REPLACE: 2-sentence bio for Ms. Pearl Monteiro -->
-          <p class="guest-info__bio">
-            <!-- REPLACE: Ms. Pearl Monteiro is a legal scholar specialising in Goan civil law and the Portuguese Civil Code. Her work explores the intersection of colonial legal heritage, gender justice, and contemporary inheritance reform. -->
+        <!-- Bio below the video -->
+        <div class="guest-details">
+          <h3 class="guest-name">Ms. Pearl Monteiro</h3>
+          <span class="guest-title">Professor, VMS Salgaocar Law College, Goa</span>
+          <p class="guest-bio">
+            Ms. Pearl Monteiro is a professor at VMS Salgaocar Law College, Goa — born, brought up, and having worked extensively within Goa's family law system. Her scholarship centres on the Portuguese Civil Code's continuing relevance to gender justice, matrimonial property, and inheritance reform in contemporary India.
           </p>
         </div>
-
       </div>
-
-      <!-- Audio player -->
-      <div class="audio-player-wrapper reveal" style="--reveal-delay:200ms">
-        <span class="audio-player-label">Listen</span>
-        <!-- REPLACE: src="assets/podcast.mp3" -->
-        <audio controls preload="metadata" aria-label="Scholarly podcast with Ms. Pearl Monteiro">
-          <source src="assets/podcast.mp3" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════
-       SECTION 6 — CASE HYPOTHETICAL
-  ════════════════════════════════════════════════════════ -->
+  <!-- SECTION 6 — CASE HYPOTHETICAL -->
   <section id="case" class="site-section" aria-label="Case Hypothetical">
     <div class="container">
-
-      <p class="section-label">Case Hypothetical</p>
-      <h2 class="section-title reveal">The Case of the Distinct Inheritors</h2>
-
-      <div class="case-intro reveal" style="--reveal-delay:100ms">
-        <p class="case-subheading">
-          A hypothetical case at the intersection of personal laws, inheritance, equality, gender, and the UCC —
-          four authored judicial opinions in the Speluncean Explorers style. In the Supreme Court of India, 2029.
-        </p>
-      </div>
+      <span class="section-label reveal">05 — Case Hypothetical</span>
+      <h2 class="section-title reveal" style="--reveal-delay:100ms">The Case of the Distinct Inheritors</h2>
+      <p class="section-subtitle reveal" style="--reveal-delay:200ms">
+        A hypothetical case at the intersection of personal laws, inheritance, equality, gender, and the UCC — four authored judicial opinions, each member following the Speluncean Explorers style.
+      </p>
 
       <div class="opinions-grid">
-
-        <!-- Opinion I — Kunsh, C.J. -->
-        <div class="opinion-card reveal" style="--reveal-delay:0ms">
-          <div class="opinion-numeral">I</div>
-          <span class="opinion-author">Kunsh Jain, C.J.</span>
+        <!-- REPLACE: Author 1-4 names and opinion texts -->
+        
+        <!-- Opinion I -->
+        <div class="opinion-card reveal" style="--reveal-delay:100ms">
+          <div class="opinion-header">
+            <span class="opinion-num">I</span>
+            <h3 class="opinion-author">Kunsh Jain, C.J.</h3>
+          </div>
           <p class="opinion-text">
-            The question of which model of family life the law ought to institutionalise is one Parliament alone is equipped to answer.
-            It requires not judicial inquiry but the democratic backing of a nation's considered judgment about how families ought to hold and share property.
-            I would refer the matter back to Parliament for examination by a Joint Parliamentary Committee, with the interim stay continuing until such consideration.
-            I am aware this may be seen as judicial abdication — but there are moments when the highest form of judicial courage is the recognition of where judicial competence ends.
+            The question of which model of family life the law ought to institutionalise is one Parliament alone is equipped to answer. It requires not judicial inquiry but the democratic backing of a nation's considered judgment about how families ought to hold and share property. I would refer the matter back to Parliament for examination by a Joint Parliamentary Committee, with the interim stay continuing until such consideration. I am aware this may be seen as judicial abdication — but there are moments when the highest form of judicial courage is the recognition of where judicial competence ends.
           </p>
         </div>
 
-        <!-- Opinion II — Sadhana, J. -->
-        <div class="opinion-card reveal" style="--reveal-delay:150ms">
-          <div class="opinion-numeral">II</div>
-          <span class="opinion-author">Sadhana Kasi, J.</span>
+        <!-- Opinion II -->
+        <div class="opinion-card reveal" style="--reveal-delay:200ms">
+          <div class="opinion-header">
+            <span class="opinion-num">II</span>
+            <h3 class="opinion-author">Sadhana Kasi, J.</h3>
+          </div>
           <p class="opinion-text">
-            Removing matrimonial communion of property under the guise of a UCC is not a neutral act — it strips a specific economic protection crucial for the survival and autonomy of a significant section of society.
-            The 21st Law Commission of India held in 2018 that discrimination, not difference, is the root of inequality: making everything uniform does not automatically eliminate inequality.
-            Forced heirship serves community interests by not leaving dependants desolate.
-            Being incommensurable models, the UCC cannot subsume this framework — the current one should prevail.
+            Removing matrimonial communion of property under the guise of a UCC is not a neutral act — it strips a specific economic protection crucial for the survival and autonomy of a significant section of society. The 21st Law Commission of India held in 2018 that discrimination, not difference, is the root of inequality: making everything uniform does not automatically eliminate inequality. Forced heirship serves community interests by not leaving dependants desolate. Being incommensurable models, the UCC cannot subsume this framework — the current one should prevail.
           </p>
         </div>
 
-        <!-- Opinion III — Animesh, J. -->
+        <!-- Opinion III -->
         <div class="opinion-card reveal" style="--reveal-delay:300ms">
-          <div class="opinion-numeral">III</div>
-          <span class="opinion-author">Animesh Jain, J.</span>
+          <div class="opinion-header">
+            <span class="opinion-num">III</span>
+            <h3 class="opinion-author">Animesh Jain, J.</h3>
+          </div>
           <p class="opinion-text">
-            The Portuguese Civil Code applies uniformly across religious communities, yet its allegiance to century-old provisions reveals persistent asymmetries — particularly for women.
-            Article 1117 gives the husband exclusive administration of all marital property, rendering the wife's legal entitlement a fiction.
-            Forced heirship, by mandating distribution to biological heirs, can prevent testators from providing for chosen families and non-traditional relationships.
-            The paradigm of the Goan regime's family-as-collective-economic-unit versus the UCC's autonomy and equality of agency cannot be easily reconciled — subsumption would vitiate the foundational principles of both.
+            The Portuguese Civil Code applies uniformly across religious communities, yet its allegiance to century-old provisions reveals persistent asymmetries — particularly for women. Article 1117 gives the husband exclusive administration of all marital property, rendering the wife's legal entitlement a fiction. Forced heirship, by mandating distribution to biological heirs, can prevent testators from providing for chosen families and non-traditional relationships. The paradigm of the Goan regime's family-as-collective-economic-unit versus the UCC's autonomy and equality of agency cannot be easily reconciled.
           </p>
         </div>
 
-        <!-- Opinion IV — Manyata, J. -->
-        <div class="opinion-card reveal" style="--reveal-delay:450ms">
-          <div class="opinion-numeral">IV</div>
-          <span class="opinion-author">Manyata Singh, J.</span>
+        <!-- Opinion IV -->
+        <div class="opinion-card reveal" style="--reveal-delay:400ms">
+          <div class="opinion-header">
+            <span class="opinion-num">IV</span>
+            <h3 class="opinion-author">Manyata Singh, J.</h3>
+          </div>
           <p class="opinion-text">
-            The apparent uniform character of the Goan system may be one of uniformity in discrimination.
-            Bigamy remains permitted for certain Gentile Hindus; a wife must prove adultery plus public scandal for divorce while a husband need prove only adultery; complex marriage registration procedures leave many women as unregistered wives with no claim to shared assets.
-            Continuing legal regimes rooted in colonial history results in a fragmented framework incompatible with Article 44's vision of national uniformity.
-            The UCC may validly be extended to Goa and Puducherry — the modalities of implementation are appropriately left to Parliament.
+            The apparent uniform character of the Goan system may be one of uniformity in discrimination. Bigamy remains permitted for certain Gentile Hindus; a wife must prove adultery plus public scandal for divorce while a husband need prove only adultery; complex marriage registration procedures leave many women as unregistered wives with no claim to shared assets. Continuing legal regimes rooted in colonial history results in a fragmented framework incompatible with Article 44's vision of national uniformity. The UCC may validly be extended to Goa and Puducherry — the modalities of implementation are appropriately left to Parliament.
           </p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════
-       SECTION 7 — ABOUT THE AUTHORS
-  ════════════════════════════════════════════════════════ -->
-  <section id="about" class="site-section site-section--alt" aria-label="About the Authors">
+  <!-- SECTION 7 — ABOUT US -->
+  <section id="about" class="site-section inverted-section" aria-label="About the Authors">
     <div class="container">
+      <span class="section-label reveal">06 — About Us</span>
+      <h2 class="section-title reveal" style="--reveal-delay:100ms">About the Authors</h2>
 
-      <p class="section-label">The Team</p>
-      <h2 class="section-title reveal">About the Authors</h2>
+      <div class="authors-grid">
 
-      <div class="members-grid">
-
-        <!-- Kunsh Jain -->
-        <div class="member-card reveal" style="--reveal-delay:0ms">
-          <div class="member-photo">
-            <!-- REPLACE: <img src="assets/kunsh.jpg" alt="Kunsh Jain" /> (whatsapp image 2025 version) -->
-            <span class="member-initials">KJ</span>
+        <!-- Author 1 — Kunsh Jain: Gold accent -->
+        <div class="author-card author-kunsh reveal" style="--reveal-delay:100ms">
+          <div class="author-avatar">
+            <img src="assets/kunsh.jpg" alt="Kunsh Jain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <span style="display:none;">KJ</span>
           </div>
-          <p class="member-name">Kunsh Jain</p>
-          <p class="member-bio">
-            Kunsh Jain is a second year BA LLB student at NLSIU, Bangalore. He has an interest in Indian constitutionalism and financial laws. He spends his time arguing, working out, and making unrealistic travel plans.
-          </p>
+          <div class="author-info">
+            <h3 class="author-name">Kunsh Jain</h3>
+            <p class="author-bio">Kunsh Jain is a second year BA LLB student at NLSIU, Bangalore with an interest in Indian constitutionalism and financial laws. He authored Opinion I, arguing for parliamentary referral on the UCC question. He spends his time arguing, working out, and making unrealistic travel plans.</p>
+          </div>
         </div>
 
-        <!-- Animesh Jain -->
-        <div class="member-card reveal" style="--reveal-delay:80ms">
-          <div class="member-photo">
-            <img src="assets/animesh.jpg" alt="Animesh Jain" />
+        <!-- Author 2 — Animesh Jain: French Blue accent -->
+        <div class="author-card author-animesh reveal" style="--reveal-delay:200ms">
+          <div class="author-avatar">
+            <img src="assets/animesh.jpg" alt="Animesh Jain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <span style="display:none;">AJ</span>
           </div>
-          <p class="member-name">Animesh Jain</p>
-          <p class="member-bio">
-            Animesh Jain is a second year BALLB student at NLSIU. His interests lie in Intellectual Property and Criminal Laws. You will find him mostly bingeing some new web series or listening to songs.
-          </p>
+          <div class="author-info">
+            <h3 class="author-name">Animesh Jain</h3>
+            <p class="author-bio">Animesh Jain is a second year BA LLB student at NLSIU with interests in Intellectual Property and Criminal Law. He authored Opinion III, interrogating the internal asymmetries of the Portuguese Civil Code. You will find him mostly bingeing a new web series or listening to songs.</p>
+          </div>
         </div>
 
-        <!-- Sadhana Kasi -->
-        <div class="member-card reveal" style="--reveal-delay:160ms">
-          <div class="member-photo">
-            <img src="assets/sadhana.jpg" alt="Sadhana Kasi" />
+        <!-- Author 3 — Sadhana Kasi: Goa Red accent -->
+        <div class="author-card author-sadhana reveal" style="--reveal-delay:300ms">
+          <div class="author-avatar">
+            <img src="assets/sadhana.jpg" alt="Sadhana Kasi" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <span style="display:none;">SK</span>
           </div>
-          <p class="member-name">Sadhana Kasi</p>
-          <p class="member-bio">
-            Sadhana Kasi is a second year BA LLB student at NLSIU, Bangalore. She has an interest in constitutional law and intellectual property law. She spends her time wasting it, playing basketball and watching shows.
-          </p>
+          <div class="author-info">
+            <h3 class="author-name">Sadhana Kasi</h3>
+            <p class="author-bio">Sadhana Kasi is a second year BA LLB student at NLSIU, Bangalore with interests in constitutional law and intellectual property. She authored Opinion II, defending the Goan regime's forced heirship protections against UCC erasure. She spends her time playing basketball and watching shows.</p>
+          </div>
         </div>
 
-        <!-- Manyata Singh -->
-        <div class="member-card reveal" style="--reveal-delay:240ms">
-          <div class="member-photo">
-            <img src="assets/manyata.jpg" alt="Manyata Singh" />
+        <!-- Author 4 — Manyata Singh: Warm terracotta accent -->
+        <div class="author-card author-manyata reveal" style="--reveal-delay:400ms">
+          <div class="author-avatar">
+            <img src="assets/manyata.jpg" alt="Manyata Singh" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <span style="display:none;">MS</span>
           </div>
-          <p class="member-name">Manyata Singh</p>
-          <p class="member-bio">
-            Manyata Singh is a second year BALLB student at NLSIU Bangalore. Her interests include study of Criminal laws, watching legal drama and singing.
-          </p>
+          <div class="author-info">
+            <h3 class="author-name">Manyata Singh</h3>
+            <p class="author-bio">Manyata Singh is a second year BA LLB student at NLSIU Bangalore with interests in Criminal Law and constitutional theory. She authored Opinion IV, arguing that Goa's apparent uniformity masks structural discrimination incompatible with Article 44. Her hobbies include watching legal drama and singing.</p>
+          </div>
         </div>
-
       </div>
 
-      <p class="site-colophon">NLSIU Bangalore &nbsp;·&nbsp; Family Law Project &nbsp;·&nbsp; 2025</p>
-
+      <div class="site-footer reveal" style="--reveal-delay:500ms">
+        <p>NLSIU Bangalore &nbsp;·&nbsp; Family Law Project &nbsp;·&nbsp; 2025</p>
+      </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════
-       SCRIPTS — order matters
-  ════════════════════════════════════════════════════════ -->
   <script src="js/nav.js"></script>
   <script src="js/scroll-reveal.js"></script>
   <script src="js/quiz.js"></script>
-
 </body>
 </html>
