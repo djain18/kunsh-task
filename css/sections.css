@@ -185,6 +185,41 @@
   border: none;
 }
 
+/* Photo + bio side-by-side row */
+.guest-bio-row {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  padding-top: 0.5rem;
+}
+
+.guest-photo {
+  width: 180px;
+  flex-shrink: 0;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 1px solid rgba(7, 7, 7, 0.1);
+}
+
+.guest-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(20%);
+  transition: filter 0.4s ease;
+}
+
+.guest-bio-row:hover .guest-photo img {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 600px) {
+  .guest-bio-row { flex-direction: column; }
+  .guest-photo { width: 100%; aspect-ratio: 4 / 3; }
+}
+
+
 .guest-name {
   font-family: var(--font-display);
   font-size: 3rem;
