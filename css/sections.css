@@ -443,6 +443,26 @@
   z-index: 2;
 }
 
+.opinion-download {
+  display: inline-block;
+  margin-top: 2rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent-gold);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.4);
+  padding-bottom: 2px;
+  position: relative;
+  z-index: 2;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.opinion-card:hover .opinion-download {
+  color: var(--text-main);
+  border-bottom-color: var(--text-main);
+}
+
 /* SECTION 7: ABOUT (INVERTED) */
 .authors-grid {
   display: grid;
