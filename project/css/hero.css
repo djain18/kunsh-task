@@ -1,0 +1,272 @@
+/* FILE: project/css/hero.css */
+
+/*
+ * SECTION 1: HERO — "Editorial Archive" concept
+ * 
+ * Uses the same warm cream as inverted sections so it flows naturally into the site.
+ * Distinguished from the womb reference via asymmetric left-aligned layout, 
+ * vertical gold accent bar, decorative § watermark, editorial sharp corners,
+ * and a split bottom row (subtitle left, CTA right).
+ */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  /* Same warm cream as the inverted sections — cohesive with the site */
+  background-color: var(--text-main);
+  border-bottom: 1px solid rgba(7, 7, 7, 0.08);
+}
+
+/* Subtle aged-paper grain texture */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Giant decorative legal section mark — watermark effect */
+.hero-deco-symbol {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(18rem, 35vw, 40rem);
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(197, 160, 89, 0.05);
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Main layout — two-column grid, headline left, description right */
+.hero-inner {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 var(--container-padding);
+}
+
+/* Vertical gold accent bar — left edge */
+.hero-accent-bar {
+  position: absolute;
+  left: 0;
+  top: 18%;
+  bottom: 18%;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent-gold) 20%,
+    var(--accent-gold) 80%,
+    transparent
+  );
+  z-index: 15;
+}
+
+/* Left column: eyebrow + headline */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8rem 3rem 4rem 1.5rem;
+  grid-column: 1;
+  grid-row: 1 / 2;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-goa);
+  margin-bottom: 2.5rem;
+}
+
+/* Small decorative dash before eyebrow */
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent-goa);
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6.5vw, 6rem);
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--bg-dark);
+  letter-spacing: -0.02em;
+}
+
+.hero-headline span {
+  display: block;
+}
+
+.title-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent-gold);
+  margin-top: 0.1em;
+}
+
+/* Right column: subtitle + CTA, vertically centered */
+.hero-bottom-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8rem 0 4rem 2rem;
+  grid-column: 2;
+  grid-row: 1 / 2;
+  /* Subtle left border divider */
+  border-left: 1px solid rgba(7, 7, 7, 0.08);
+}
+
+.hero-subheading {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  line-height: 1.8;
+  color: rgba(7, 7, 7, 0.85);
+  max-width: 420px;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.hero-actions {
+  display: flex;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--bg-dark);
+  border: 1px solid rgba(7, 7, 7, 0.25);
+  border-radius: 0; /* Sharp editorial corners */
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-cta:hover {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  border-color: var(--bg-dark);
+  text-decoration: none;
+  letter-spacing: 0.22em;
+}
+
+.hero-cta svg {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-cta:hover svg {
+  transform: translateY(4px);
+}
+
+/* Scroll indicator */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, var(--accent-gold), transparent);
+  animation: scrollPulse 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scaleY(0.4);
+    transform-origin: top;
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+/* ——— Responsive ——— */
+
+@media (max-width: 992px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .hero-content {
+    padding: 10rem var(--container-padding) 2rem;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .hero-bottom-row {
+    padding: 2rem var(--container-padding) 6rem;
+    grid-column: 1;
+    grid-row: 2;
+    border-left: none;
+    border-top: 1px solid rgba(7, 7, 7, 0.08);
+  }
+
+  .hero-accent-bar {
+    top: 12%;
+    bottom: auto;
+    height: 100px;
+  }
+
+  .hero-deco-symbol {
+    right: 2%;
+    font-size: clamp(10rem, 25vw, 18rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    line-height: 1.1;
+  }
+
+  .hero-accent-bar {
+    display: none;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+}
