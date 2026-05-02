@@ -21,7 +21,7 @@
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#video">Infographic</a></li>
-      <li><a href="#voices">Local Lived Exp</a></li>
+      <li><a href="#voices">Local Lives</a></li>
       <li><a href="#quiz">Quiz</a></li>
       <li><a href="#podcast">Podcast</a></li>
       <li><a href="#case">Hypothetical</a></li>
@@ -123,8 +123,13 @@
         <!-- Person 1 -->
         <div class="voice-card reveal" style="--reveal-delay:100ms">
           <div class="voice-video">
+            <div class="video-cover-overlay" data-src="https://drive.google.com/file/d/1nNHtwb8rXsVKI6X4BV_gDe6FKw-AkteB/preview">
+              <div class="cover-play-btn" aria-hidden="true">&#9654;</div>
+              <span class="cover-label">Matilde Ribeiro</span>
+            </div>
             <iframe
-              src="https://drive.google.com/file/d/1nNHtwb8rXsVKI6X4BV_gDe6FKw-AkteB/preview"
+              src=""
+              data-src="https://drive.google.com/file/d/1nNHtwb8rXsVKI6X4BV_gDe6FKw-AkteB/preview"
               allow="autoplay"
               allowfullscreen
               aria-label="Interview with Matilde Ribeiro"
@@ -133,28 +138,27 @@
           <div class="voice-meta goa-border">
             <h3 class="voice-name">Matilde Ribeiro</h3>
             <span class="voice-desc">4th Year BA LLB Student, NLSIU Bangalore &nbsp;·&nbsp; Goan Ancestry</span>
-            <blockquote class="voice-quote">
-              "Growing up, I always knew the rules were different in Goa — but I never understood how different until I studied the Code."
-            </blockquote>
           </div>
         </div>
 
         <!-- Person 2 -->
         <div class="voice-card reveal" style="--reveal-delay:300ms">
           <div class="voice-video">
+            <div class="video-cover-overlay" data-src="https://drive.google.com/file/d/1n8nGZbnnoru-ILlFsI5bNozF1FwTPeM0/preview">
+              <div class="cover-play-btn" aria-hidden="true">&#9654;</div>
+              <span class="cover-label">Dr. Kamaraj</span>
+            </div>
             <iframe
-              src="https://drive.google.com/file/d/1n8nGZbnnoru-ILlFsI5bNozF1FwTPeM0/preview"
+              src=""
+              data-src="https://drive.google.com/file/d/1n8nGZbnnoru-ILlFsI5bNozF1FwTPeM0/preview"
               allow="autoplay"
               allowfullscreen
-              aria-label="Interview with Dr. Kamraj"
+              aria-label="Interview with Dr. Kamaraj"
             ></iframe>
           </div>
           <div class="voice-meta french-border">
-            <h3 class="voice-name">Dr. Kamraj</h3>
+            <h3 class="voice-name">Dr. Kamaraj</h3>
             <span class="voice-desc">A Domicile of Puducherry</span>
-            <blockquote class="voice-quote">
-              "The renonçant system is not history — it is still my family's reality, three generations on."
-            </blockquote>
           </div>
         </div>
       </div>
@@ -170,7 +174,7 @@
         Ten interactive questions on the Portuguese Civil Code, the French Civil Code, and the inheritance systems of Goa and Puducherry. Select an answer — wrong choices will be marked in red, and the correct answer revealed.
       </p>
 
-      <div class="quiz-app reveal" style="--reveal-delay:300ms">
+      <div class="quiz-app reveal" id="quiz-app" style="--reveal-delay:300ms">
         <div class="quiz-header">
           <div class="quiz-progress-wrapper">
             <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
@@ -181,6 +185,9 @@
         <div class="quiz-body" id="quiz-screen">
           <h3 class="quiz-question" id="quiz-question"></h3>
           <div class="quiz-options" id="quiz-options"></div>
+          <div class="quiz-skip-row" id="quiz-skip-row">
+            <button class="quiz-skip-btn" id="quiz-skip-btn">Skip this question &rarr;</button>
+          </div>
         </div>
 
         <div class="quiz-fact-card" id="quiz-fact-card">
@@ -204,14 +211,34 @@
   <!-- SECTION 5 — SCHOLARLY PODCAST -->
   <section id="podcast" class="site-section inverted-section" aria-label="Scholarly Podcast">
     <div class="container">
-      <span class="section-label reveal">04 — Scholarly Podcast</span>
-      <h2 class="section-title reveal" style="--reveal-delay:100ms">A Scholarly Conversation</h2>
+      <div class="podcast-header-row">
+        <div class="podcast-header-left">
+          <span class="section-label reveal">04 — Scholarly Podcast</span>
+          <h2 class="section-title reveal" style="--reveal-delay:100ms">A Scholarly Conversation</h2>
+        </div>
+
+        <!-- Pull quotes from the interview -->
+        <div class="podcast-quotes reveal" style="--reveal-delay:150ms">
+          <blockquote class="podcast-pull-quote">
+            <span class="pull-quote-mark">&ldquo;</span>Biblical tinge in a secular law<span class="pull-quote-mark">&rdquo;</span>
+          </blockquote>
+          <blockquote class="podcast-pull-quote">
+            <span class="pull-quote-mark">&ldquo;</span>Gold diggers would do great with Goan law<span class="pull-quote-mark">&rdquo;</span>
+          </blockquote>
+        </div>
+      </div>
 
       <div class="podcast-module reveal" style="--reveal-delay:200ms">
         <!-- Full-width video player -->
         <div class="guest-video-full">
+          <div class="video-cover-overlay podcast-cover" data-src="https://drive.google.com/file/d/12IeUbsWIrZT5Na4-tnGGHeMhT4tl_5t8/preview">
+            <div class="cover-play-btn" aria-hidden="true">&#9654;</div>
+            <span class="cover-label">Ms. Pearl Monteiro</span>
+            <span class="cover-sublabel">Associate Professor, VMS Salgaocar Law College, Goa</span>
+          </div>
           <iframe
-            src="https://drive.google.com/file/d/1GbP8i5n-MtNAlC29h-jCwOxvSBGZYhWN/preview"
+            src=""
+            data-src="https://drive.google.com/file/d/12IeUbsWIrZT5Na4-tnGGHeMhT4tl_5t8/preview"
             allow="autoplay"
             allowfullscreen
             aria-label="Video interview with Ms. Pearl Monteiro"
@@ -224,7 +251,7 @@
           </div>
           <div class="guest-details">
             <h3 class="guest-name">Ms. Pearl Monteiro</h3>
-            <span class="guest-title">Professor, VMS Salgaocar Law College, Goa</span>
+            <span class="guest-title">Associate Professor, VMS Salgaocar Law College, Goa</span>
             <p class="guest-bio">
               Ms. Pearl Monteiro is a professor at VMS Salgaocar Law College, Goa — born, brought up, and having worked extensively within Goa's family law system. Her scholarship centres on the Portuguese Civil Code's continuing relevance to gender justice, matrimonial property, and inheritance reform in contemporary India.
             </p>
@@ -240,54 +267,71 @@
       <span class="section-label reveal">05 — Case Hypothetical</span>
       <h2 class="section-title reveal" style="--reveal-delay:100ms">The Case of the Distinct Inheritors</h2>
       <p class="section-subtitle reveal" style="--reveal-delay:200ms">
-        A hypothetical case at the intersection of personal laws, inheritance, equality, gender, and the UCC — four authored judicial opinions, each member following the Speluncean Explorers style.
+        In The Supreme Court of India, 2029 — four authored judicial opinions in the Speluncean Explorers style.
       </p>
 
+      <!-- Case Preamble -->
+      <div class="case-preamble reveal" style="--reveal-delay:300ms">
+        <p>Twin references — one from the Bombay HC (Goa Bench) and one from the Madras HC — are consolidated before this bench on a single question of inheritance law.</p>
+        <p>The Uniform Civil Code Act, 2029, passed by the Central government, threatens to displace the distinct systems of Goa and Puducherry. The Portuguese Civil Code, preserved by Article 372 of the Constitution, faced extinction. The Puducherry legislature had separately revived French civil law traditions through the Puducherry Hindu Succession (Repeal) Act, 2028.</p>
+        <p>This court had previously stayed the UCC's extension to these territories by interim order. The question now before the bench is:</p>
+        <blockquote class="case-question">
+          Whether the doctrines of forced heirship and matrimonial communion of property constitute a distinct yet coherent system of inheritance law — whose community-rooted conception of the family as an economic unit is so fundamentally different from the individual-testator model of the UCC — as to be incapable of substitution without legislative deliberation on why one model is preferred over the other.
+        </blockquote>
+      </div>
+
       <div class="opinions-grid">
-        <!-- REPLACE: Author 1-4 names and opinion texts -->
-        
-        <!-- Opinion I -->
+
+        <!-- Opinion I — Kunsh Jain, C.J. -->
         <div class="opinion-card reveal" style="--reveal-delay:100ms">
           <div class="opinion-header">
             <span class="opinion-num">I</span>
             <h3 class="opinion-author">Kunsh Jain, C.J.</h3>
           </div>
-          <p class="opinion-text">
-            The question of which model of family life the law ought to institutionalise is one Parliament alone is equipped to answer. It requires not judicial inquiry but the democratic backing of a nation's considered judgment about how families ought to hold and share property. I would refer the matter back to Parliament for examination by a Joint Parliamentary Committee, with the interim stay continuing until such consideration. I am aware this may be seen as judicial abdication — but there are moments when the highest form of judicial courage is the recognition of where judicial competence ends.
-          </p>
+          <p class="opinion-text">The references arise from the UCC passed by the NDA coalition before the 2029 elections. The Portuguese Civil Code owes its continued existence to Article 372, which preserved all existing laws until Parliament legislated otherwise. Parliament never did — until now.</p>
+          <p class="opinion-text">While the Puducherry legislature revived French civil law traditions through the 2028 Act, the learned AG argues these regimes constitute an "impermissible restriction on testamentary freedom" incompatible with national integration.</p>
+          <p class="opinion-text">The questions before us go to which model of family life the law ought to institutionalise. That is a question Parliament alone is equipped to answer — it requires not judicial enquiry, but democratic backing.</p>
+          <p class="opinion-text">I would refer the matter to a Joint Parliamentary Committee to examine the UCC's application to Goa and Puducherry. Particular reference must be made to matrimonial property interests and succession rights of surviving spouses. I express no opinion on the merits.</p>
+          <p class="opinion-text">I am aware this may be seen as judicial abdication. But there are moments when the highest form of judicial courage is the recognition of where judicial competence ends.</p>
         </div>
 
-        <!-- Opinion II -->
+        <!-- Opinion II — Sadhana Kasi, J. -->
         <div class="opinion-card reveal" style="--reveal-delay:200ms">
           <div class="opinion-header">
             <span class="opinion-num">II</span>
             <h3 class="opinion-author">Sadhana Kasi, J.</h3>
           </div>
-          <p class="opinion-text">
-            Removing matrimonial communion of property under the guise of a UCC is not a neutral act — it strips a specific economic protection crucial for the survival and autonomy of a significant section of society. The 21st Law Commission of India held in 2018 that discrimination, not difference, is the root of inequality: making everything uniform does not automatically eliminate inequality. Forced heirship serves community interests by not leaving dependants desolate. Being incommensurable models, the UCC cannot subsume this framework — the current one should prevail.
-          </p>
+          <p class="opinion-text">In <em>Jose Paulo Coutinho</em> (2019), this Court noted that "Goa is a shining example of an Indian State which has a uniform civil code applicable to all, regardless of religion." It is ironic that the UCC now seeks to displace the very system this Court once praised.</p>
+          <p class="opinion-text">Under the Goan regime, all property becomes jointly owned upon marriage. A wife is entitled to demand half on partition; her written consent is required to accept or renounce an inheritance. Removing this is not a neutral act.</p>
+          <p class="opinion-text">As Bina Agarwal argues, property ownership grants women bargaining power — more so than employment or income. The UCC's focus on individual testators, facially neutral, ignores a history of patriarchy and subjugation.</p>
+          <p class="opinion-text">The 21st Law Commission (2018) held that discrimination, not difference, is the root of inequality. Making everything uniform does not automatically eliminate inequality.</p>
+          <p class="opinion-text">Forced heirship serves community interests by not leaving dependants desolate. Being incommensurable models, the UCC cannot wholly subsume this framework. The current one should prevail.</p>
         </div>
 
-        <!-- Opinion III -->
+        <!-- Opinion III — Animesh Jain, J. -->
         <div class="opinion-card reveal" style="--reveal-delay:300ms">
           <div class="opinion-header">
             <span class="opinion-num">III</span>
             <h3 class="opinion-author">Animesh Jain, J.</h3>
           </div>
-          <p class="opinion-text">
-            The Portuguese Civil Code applies uniformly across religious communities, yet its allegiance to century-old provisions reveals persistent asymmetries — particularly for women. Article 1117 gives the husband exclusive administration of all marital property, rendering the wife's legal entitlement a fiction. Forced heirship, by mandating distribution to biological heirs, can prevent testators from providing for chosen families and non-traditional relationships. The paradigm of the Goan regime's family-as-collective-economic-unit versus the UCC's autonomy and equality of agency cannot be easily reconciled.
-          </p>
+          <p class="opinion-text">With respect to the Bench in <em>Jose Paulo</em>, I cannot concur with the celebratory character ascribed to Goan succession law. What exists is a quasi-uniform regime, as Prof. Nivedita Menon and Adv. Albertina Almeida have persuasively argued.</p>
+          <p class="opinion-text">The Church retains influence over Catholic marriages. Gentile Hindus are permitted limited polygamy. The code lacks adequate protections for women in marital breakdown.</p>
+          <p class="opinion-text">Under Article 1108, marriage creates an automatic communion of assets. Yet Article 1117 vests administration exclusively with the husband — rendering the wife's ownership a legal fiction. Portugal itself has since amended its laws to communion of acquired assets only.</p>
+          <p class="opinion-text">India's obligations under CEDAW — guaranteeing women the right to own and administer property without discrimination — cannot be met while these arrangements persist.</p>
+          <p class="opinion-text">Forced heirship restricts testamentary freedom, preventing testators from providing for chosen families or non-traditional relationships. The paradigm of family-as-collective-unit versus the UCC's autonomy and equality of agency cannot be easily reconciled. Any subsumption would vitiate both.</p>
         </div>
 
-        <!-- Opinion IV -->
+        <!-- Opinion IV — Manyata Singh, J. -->
         <div class="opinion-card reveal" style="--reveal-delay:400ms">
           <div class="opinion-header">
             <span class="opinion-num">IV</span>
             <h3 class="opinion-author">Manyata Singh, J.</h3>
           </div>
-          <p class="opinion-text">
-            The apparent uniform character of the Goan system may be one of uniformity in discrimination. Bigamy remains permitted for certain Gentile Hindus; a wife must prove adultery plus public scandal for divorce while a husband need prove only adultery; complex marriage registration procedures leave many women as unregistered wives with no claim to shared assets. Continuing legal regimes rooted in colonial history results in a fragmented framework incompatible with Article 44's vision of national uniformity. The UCC may validly be extended to Goa and Puducherry — the modalities of implementation are appropriately left to Parliament.
-          </p>
+          <p class="opinion-text">I shall not engage with political motivations. The matter concerns coherence and continuity of the distinct inheritance systems of Goa and Puducherry against the recent UCC. Article 44 contemplates a civil code uniform in application throughout India.</p>
+          <p class="opinion-text">The benefits of communion of property require proof of formal marriage registration — a complex multi-step process. Scholar Shaila Desouza finds that women routinely mistake the declaration of intent for registration itself. They find themselves as unregistered wives with no claim to shared assets.</p>
+          <p class="opinion-text">Bigamy, criminalised under the IPC, remains permitted for certain Gentile Hindus — creating exceptions within the supposed uniformity. Grounds of divorce differ too: a husband need prove only adultery; a wife must additionally prove public scandal or abandonment.</p>
+          <p class="opinion-text">The apparent uniform character of the Goan system may be one of uniformity in discrimination, as Adv. Albertina Almeida's analysis of the GCC illustrates.</p>
+          <p class="opinion-text">In Puducherry, descendants of the Renonçants are bound today by a choice made by their grandfathers under an 1881 regulation — a legal regime that has not evolved alongside contemporary developments. The UCC may validly be extended to Goa and Puducherry; the modalities of implementation are appropriately left to Parliament.</p>
         </div>
       </div>
     </div>
@@ -309,7 +353,7 @@
           </div>
           <div class="author-info">
             <h3 class="author-name">Kunsh Jain</h3>
-            <p class="author-bio">Kunsh Jain is a second year BA LLB student at NLSIU, Bangalore with an interest in Indian constitutionalism and financial laws. He authored Opinion I, arguing for parliamentary referral on the UCC question. He spends his time arguing, working out, and making unrealistic travel plans.</p>
+            <p class="author-bio">Kunsh Jain is a second year BA LLB student at NLSIU, Bangalore with an interest in Indian constitutionalism and financial laws. He spends his time arguing, working out, and making unrealistic travel plans.</p>
           </div>
         </div>
 
@@ -321,7 +365,7 @@
           </div>
           <div class="author-info">
             <h3 class="author-name">Animesh Jain</h3>
-            <p class="author-bio">Animesh Jain is a second year BA LLB student at NLSIU with interests in Intellectual Property and Criminal Law. He authored Opinion III, interrogating the internal asymmetries of the Portuguese Civil Code. You will find him mostly bingeing a new web series or listening to songs.</p>
+            <p class="author-bio">Animesh Jain is a second year BA LLB student at NLSIU with interests in Intellectual Property and Criminal Law. You will find him mostly bingeing a new web series or listening to songs.</p>
           </div>
         </div>
 
@@ -333,7 +377,7 @@
           </div>
           <div class="author-info">
             <h3 class="author-name">Sadhana Kasi</h3>
-            <p class="author-bio">Sadhana Kasi is a second year BA LLB student at NLSIU, Bangalore with interests in constitutional law and intellectual property. She authored Opinion II, defending the Goan regime's forced heirship protections against UCC erasure. She spends her time playing basketball and watching shows.</p>
+            <p class="author-bio">Sadhana Kasi is a second year BA LLB student at NLSIU, Bangalore with interests in constitutional law and intellectual property. She spends her time playing basketball and watching shows.</p>
           </div>
         </div>
 
@@ -345,7 +389,7 @@
           </div>
           <div class="author-info">
             <h3 class="author-name">Manyata Singh</h3>
-            <p class="author-bio">Manyata Singh is a second year BA LLB student at NLSIU Bangalore with interests in Criminal Law and constitutional theory. She authored Opinion IV, arguing that Goa's apparent uniformity masks structural discrimination incompatible with Article 44. Her hobbies include watching legal drama and singing.</p>
+            <p class="author-bio">Manyata Singh is a second year BA LLB student at NLSIU Bangalore with interests in Criminal Law and constitutional theory. Her hobbies include watching legal drama and singing.</p>
           </div>
         </div>
       </div>
@@ -359,5 +403,15 @@
   <script src="js/nav.js"></script>
   <script src="js/scroll-reveal.js"></script>
   <script src="js/quiz.js"></script>
+  <script>
+    document.querySelectorAll('.video-cover-overlay').forEach(function(overlay) {
+      overlay.addEventListener('click', function() {
+        var src = overlay.getAttribute('data-src');
+        var iframe = overlay.parentElement.querySelector('iframe');
+        if (iframe) iframe.src = src;
+        overlay.style.display = 'none';
+      });
+    });
+  </script>
 </body>
 </html>

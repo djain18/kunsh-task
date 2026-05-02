@@ -3,114 +3,102 @@
 document.addEventListener('DOMContentLoaded', () => {
   const quizData = [
     {
-      question: "Which code governs the personal law of Goans, regardless of their religion?",
+      question: "Priya is a Hindu woman, born and domiciled in Goa. Her father, also a Goa domicile, passes away without a will. The dispute arises as to which law should govern how the estate is divided. Which of the following is correct?",
       options: [
-        "The Uniform Civil Code of India, 1956",
-        "The Portuguese Civil Code, 1867",
-        "The French Civil Code, 1804",
-        "The Goa Hindu Marriage Act, 1980"
+        "As Priya is a Hindu, the Hindu Succession Act will apply to her family's inheritance",
+        "The Portuguese Civil Code applies to all persons domiciled in Goa, regardless of religion",
+        "Hindu law applies because the father dies intestate; a will would have allowed him to choose the applicable law"
       ],
       correct: 1,
-      fact: "The Portuguese Civil Code was enacted in 1867 and extended to Goa in 1869. Even after Goa's liberation in 1961, the Indian Parliament enacted the Goa, Daman and Diu Administration Act, 1962, allowing the pre-liberation laws to continue."
+      fact: "The Portuguese Civil Code, 1867 applies uniformly to all persons domiciled in Goa — Hindus, Muslims, Catholics, and others alike. Unlike the rest of India, where inheritance is governed by religion-based personal laws, in Goa religion is irrelevant. Your domicile in Goa is what matters. (Source: The Portuguese Civil Code, 1867, s. 4(1) Goa, Daman and Diu (Administration) Act, 1962)"
     },
     {
-      question: "Under the Goan inheritance system, what is 'legítima'?",
+      question: "Ramesh, a Goa domicile, has three children: a son and two daughters. He wishes to leave his entire estate to his son alone, feeling the son has contributed most to the family. He writes a valid will to this effect. Is the will valid?",
       options: [
-        "A tax paid to the state upon inheritance",
-        "The portion of an estate that can be freely willed to anyone",
-        "The mandatory share of an estate reserved for biological descendants",
-        "A certificate proving legal heirship"
-      ],
-      correct: 2,
-      fact: "The 'legítima' (forced heirship) ensures that half of the testator's property must be transferred to biological heirs. A parent cannot entirely disinherit their children under this regime."
-    },
-    {
-      question: "What is the default property regime for marriages contracted in Goa without a prenuptial agreement?",
-      options: [
-        "Communion of Assets (Comunhão de Bens)",
-        "Total Separation of Assets",
-        "Partial Communion of Assets",
-        "Husband's Exclusive Ownership"
-      ],
-      correct: 0,
-      fact: "Under the 'Communion of Assets', both spouses hold equal half-shares in all properties owned before the marriage or acquired during it. Neither spouse can dispose of this joint property without the other's consent."
-    },
-    {
-      question: "In Puducherry, who are the 'Renonçants'?",
-      options: [
-        "Citizens who renounced their Indian citizenship",
-        "Local inhabitants who renounced their personal laws to be governed by the French Civil Code",
-        "French nationals who refused to leave after 1954",
-        "People who renounced property rights to become monks"
+        "Yes",
+        "No"
       ],
       correct: 1,
-      fact: "A decree in 1881 allowed natives of French India to renounce their customary personal laws and opt for the French Civil Code. These citizens and their descendants are known as Renonçants."
+      fact: "The Portuguese Civil Code limits testamentary freedom through forced heirship (legítima). A testator may only freely dispose of half their estate — the 'available portion' (quota disponível). The remaining half is legally reserved for direct descendants in equal shares. Ramesh's will, to the extent it attempts to deprive his daughters of their forced share, is unenforceable against them. (Source: Article 1784, Portuguese Civil Code of 1867)"
     },
     {
-      question: "Which of these laws applies to the Renonçants of Puducherry regarding succession?",
+      question: "The Portuguese Civil Code, which governs inheritance and family law in Goa today, was a collaborative effort drafted by a committee of jurists over several decades. True or False?",
       options: [
-        "The Hindu Succession Act, 1956",
-        "The Indian Succession Act, 1925",
-        "The French Civil Code (Code Napoléon)",
-        "The Portuguese Civil Code"
-      ],
-      correct: 2,
-      fact: "Even today, disputes regarding marriage, succession, and property for Renonçants are adjudicated by Indian courts interpreting the French Civil Code in French."
-    },
-    {
-      question: "Can a Goan completely disinherit their biological child under normal circumstances?",
-      options: [
-        "Yes, by executing a registered will",
-        "Yes, but only if the child gives consent",
-        "No, due to the rule of 'legítima'",
-        "No, unless they seek permission from the High Court"
-      ],
-      correct: 2,
-      fact: "Because of 'legítima', half of the estate is strictly protected for descendants. You can only freely dispose of the remaining half (the 'quota disponível')."
-    },
-    {
-      question: "What unique right does the Portuguese Civil Code (as applicable in Goa) grant to women regarding marital property?",
-      options: [
-        "The right to exclusively administer the husband's business",
-        "An automatic 50% ownership stake in all matrimonial assets",
-        "The right to claim property only upon divorce",
-        "The right to inherit only if there are no male heirs"
+        "True",
+        "False"
       ],
       correct: 1,
-      fact: "While the communion of assets grants women a 50% stake, critics point out that Article 1117 of the Code historically gave the husband the exclusive right to *administer* all marital property."
+      fact: "Viscount Antonio Luis de Seabra (1798–1895), a High Court judge with complete mastery of civil law, single-handedly wrote the entire Code by hand from 1850 to 1858. The original manuscript is still preserved. (Source: Elgar Noronha, 'Portuguese Civil Code: The silent law that unites Goa, Daman and Diu', Frontline)"
     },
     {
-      question: "What legal instrument confirmed the continuation of French laws for certain citizens in Puducherry after its de facto transfer to India?",
+      question: "Anjali and Dev marry in Goa without signing any pre-nuptial agreement. They later acquire a house together, and Anjali also inherits land from her parents. Years later, they separate. Which of the following best describes the legal position of their property?",
       options: [
-        "The Treaty of Cession, 1956",
-        "The Constitution of India (Original Draft)",
-        "The Puducherry Personal Law Act",
-        "The State Reorganisation Act"
-      ],
-      correct: 0,
-      fact: "The Treaty of Cession signed between India and France specifically protected the legal rights of those who were governed by the French legal system prior to the transfer."
-    },
-    {
-      question: "Is bigamy strictly prohibited for everyone in Goa under the Portuguese Civil Code?",
-      options: [
-        "Yes, without exception",
-        "No, it is permitted for 'Gentile Hindus' under specific circumstances",
-        "No, it is permitted for all religious communities",
-        "Yes, but the penalty is only a minor fine"
+        "Only the house they acquired together is shared — Anjali's inherited land remains hers alone",
+        "All property, including Anjali's inherited land and any assets brought into the marriage, is jointly owned by both spouses",
+        "Dev has no claim over Anjali's inherited property, but can claim the house if he paid for it"
       ],
       correct: 1,
-      fact: "Under the Codes of Usages and Customs of Gentile Hindus of Goa (1880), a Hindu man can take a second wife if his first wife does not bear a child by age 25 or a male child by age 30, complicating the claim that Goa has a perfectly uniform civil code."
+      fact: "The default matrimonial property regime under the Portuguese Civil Code is 'communion of assets' (comunhão de bens). In the absence of a pre-nuptial contract, all property — whether inherited, brought into the marriage, or acquired after marriage — is jointly owned by both spouses from the moment of marriage. This is entirely unlike the rest of India, where assets typically remain with whoever holds title. (Source: Article 1108, Portuguese Civil Code of 1867)"
     },
     {
-      question: "Under the French Civil Code applied in Puducherry, how are children treated in inheritance compared to Indian personal laws?",
+      question: "Since Goa's communion of assets regime gives both spouses equal ownership over all marital property, women in Goa have equal power to manage and control that property compared to their husbands. True or False?",
       options: [
-        "Daughters get no share",
-        "Eldest son takes everything (primogeniture)",
-        "All legitimate children inherit equally, regardless of sex",
-        "Male children get double the share of female children"
+        "True",
+        "False"
+      ],
+      correct: 1,
+      fact: "Equal ownership is not the same as equal control. While communion of assets creates joint co-ownership, the Portuguese Civil Code gives the husband the exclusive right to administer all property of the couple — including the wife's own individual assets. As Albertina Almeida writes, the law 'makes the control button available to the husband.' Equal ownership on paper can coexist with unequal power in practice. (Source: Article 1117, Portuguese Civil Code of 1867)"
+    },
+    {
+      question: "Suresh is domiciled in Goa. He owns a flat in Pune, land in Goa, and a house in Singapore. He dies without a will. His relatives argue that the Pune flat and Singapore house will not be governed by the Portuguese Civil Code as they are located outside Goa. Are the relatives correct?",
+      options: [
+        "Yes",
+        "No"
+      ],
+      correct: 1,
+      fact: "The Portuguese Civil Code applies based on the domicile of the person, not the location of the property. The Supreme Court affirmed that a person domiciled in Goa is governed by the Portuguese Civil Code in succession matters, even for property situated outside Goa. (Source: Jose Paulo Coutinho v. Maria Luiza Valentina Pereira, (2019) 20 SCC 85)"
+    },
+    {
+      question: "The French Civil Code applicable in Puducherry governs which of the following persons?",
+      options: [
+        "All inhabitants of Puducherry, regardless of their personal law",
+        "All persons domiciled in Puducherry at the time of any legal dispute",
+        "Renonçants who chose to renounce their personal laws and be governed by the French Civil Code"
       ],
       correct: 2,
-      fact: "The French Civil Code, rooted in the principles of the French Revolution, mandated strict equality among all legitimate children for inheritance, an egalitarian principle that preceded similar reforms in Indian law by over a century."
+      fact: "The French Civil Code in Puducherry applies to Renonçants — native Indians who made a choice to renounce their personal laws. This option was created by a French regulation on 21 September 1881 to absorb native Indians into the French legal order. Renonçants are governed by the French Civil Code in matters of marriage, succession, and family affairs. (Source: MFA No. 6563 of 2018, Karnataka High Court; M. Kadirvelu v. G. Santhanalakshmi, Madras HC (2016))"
+    },
+    {
+      question: "John and Mary are Christians born and raised in Puducherry. Their grandparents were Renonçants. They married and then moved to Bengaluru, where they have lived for years. Their marriage breaks down and they approach a Karnataka family court. John argues that since they reside in Karnataka, Indian personal law should govern their case. Is he correct?",
+      options: [
+        "No, since they were born and grew up in Puducherry the French Civil Code would apply",
+        "Yes, the Indian Christian Marriage Act applies since they are Christians living in Karnataka",
+        "No, as descendants of Renonçants they remain governed by the French Civil Code regardless of where they reside"
+      ],
+      correct: 2,
+      fact: "The Karnataka HC held that the French Civil Code applies to Renonçants and their descendants irrespective of where they presently reside. The court called it a 'linguistic paradox' where the descendants inherited the consequence of a renunciation made by their forefathers. The divorce was ultimately granted under Article 245-1 of the French Civil Code. (Source: MFA No. 6563 of 2018, Karnataka High Court — Leo John v. Eugenia Preethi)"
+    },
+    {
+      question: "Rishi and Khushi are married and domiciled in Goa under communion of assets. Their joint estate is worth ₹60,00,000. Rishi dies, leaving a will directing ₹10,00,000 from his share to his elder child Abhiram, with the remainder distributed under law. They have two children. Is the will valid? What is the minimum amount Arjun (younger child) is entitled to receive, and what is the total Abhiram would receive?",
+      options: [
+        "Yes — Arjun: ₹15,00,000 and Abhiram: ₹15,00,000",
+        "Yes — Arjun: ₹7,50,000 and Abhiram: ₹17,50,000",
+        "No — Arjun: ₹30,00,000 and Abhiram: ₹30,00,000",
+        "No — Arjun: ₹15,00,000 and Abhiram: ₹15,00,000"
+      ],
+      correct: 1,
+      fact: "Rishi's estate is 50% of ₹60L = ₹30L. He can freely dispose half of that (₹15L) by will — the ₹10L to Abhiram is valid. The legítima reserves the other ₹15L equally for both children: ₹7.5L each as their forced share. Abhiram thus gets ₹10L (will) + ₹7.5L (legítima) = ₹17.5L. Arjun is not deprived of his forced share, so the will is valid. (Source: Portuguese Civil Code, 1867 — communion of assets and forced heirship provisions)"
+    },
+    {
+      question: "Jay is a Renonçant domiciled in Puducherry, governed by the French Civil Code. He has two children, Anjali and Ravi. He passes away leaving an estate worth ₹30,00,000 and a will leaving his entire estate to a charitable trust. The children challenge the will. What is each child's minimum legally guaranteed share?",
+      options: [
+        "Nothing — the will is valid",
+        "₹15,00,000 each (total estate divided equally)",
+        "₹7,50,000 each (half of total estate divided equally)",
+        "₹10,00,000 each (two-thirds of total estate divided equally)"
+      ],
+      correct: 3,
+      fact: "Under Articles 912–913 of the French Civil Code, the réserve héréditaire cannot be willed away. The reserved fraction depends on the number of children: 1 child receives half; 2 children together receive two-thirds (one-third each); 3 or more receive three-quarters. With 2 children, ₹20,00,000 (2/3) is reserved and split equally: ₹10,00,000 each. This mirrors the Portuguese legítima — both protect children from disinheritance, but the French fraction scales with the number of heirs. (Source: Articles 912–913, French Civil Code, as applicable to Renonçants in Puducherry)"
     }
   ];
 
@@ -125,17 +113,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const factCard = document.getElementById('quiz-fact-card');
   const factText = document.getElementById('quiz-fact-text');
   const nextBtn = document.getElementById('quiz-next-btn');
+  const skipBtn = document.getElementById('quiz-skip-btn');
+  const skipRow = document.getElementById('quiz-skip-row');
+  const quizApp = document.getElementById('quiz-app');
   const quizScreen = document.getElementById('quiz-screen');
   const resultsScreen = document.getElementById('quiz-results-screen');
   const scoreEl = document.getElementById('results-score');
   const titleEl = document.getElementById('results-title');
   const retakeBtn = document.getElementById('quiz-retake-btn');
 
+  function scrollToQuiz() {
+    quizApp.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   function loadQuestion() {
     answered = false;
     factCard.style.display = 'none';
     nextBtn.parentElement.style.display = 'none';
-    
+    skipRow.style.display = 'flex';
+
     const q = quizData[currentQ];
     questionEl.textContent = q.question;
     optionsEl.innerHTML = '';
@@ -179,10 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
       buttons[correctIndex].classList.add('correct');
     }
 
-    // Show Did You Know card
+    // Show Did You Know card, hide skip
     factText.textContent = quizData[currentQ].fact;
     factCard.style.display = 'block';
     nextBtn.parentElement.style.display = 'flex';
+    skipRow.style.display = 'none';
     
     // Update progress bar to fully cover current question
     const progressPercent = ((currentQ + 1) / quizData.length) * 100;
@@ -211,8 +208,22 @@ document.addEventListener('DOMContentLoaded', () => {
     currentQ++;
     if (currentQ < quizData.length) {
       loadQuestion();
+      scrollToQuiz();
     } else {
       showResults();
+      scrollToQuiz();
+    }
+  });
+
+  skipBtn.addEventListener('click', () => {
+    if (answered) return;
+    currentQ++;
+    if (currentQ < quizData.length) {
+      loadQuestion();
+      scrollToQuiz();
+    } else {
+      showResults();
+      scrollToQuiz();
     }
   });
 
@@ -223,6 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     quizScreen.style.display = 'block';
     document.querySelector('.quiz-header').style.display = 'flex';
     loadQuestion();
+    scrollToQuiz();
   });
 
   // Init
